@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Type:</b>
+  <%= @event.type %>
+</p>
+
+<p>
+  <b>Hour:</b>
+  <%= @event.hour %>
+</p>
+
+<p>
+  <b>Minute:</b>
+  <%= @event.minute %>
+</p>
+
+<p>
+  <b>Second:</b>
+  <%= @event.second %>
+</p>
+
+<p>
+  <b>Compare:</b>
+  <%= @event.compare %>
+</p>
+
+<p>
+  <b>Temperature:</b>
+  <%= @event.temperature %>
+</p>
+
+<p>
+  <b>Instruction:</b>
+  <%= @event.instruction %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  type: 1
+  hour: 1
+  minute: 1
+  second: 1
+  compare: 1
+  temperature: 1
+  instruction: MyString
+
+two:
+  type: 1
+  hour: 1
+  minute: 1
+  second: 1
+  compare: 1
+  temperature: 1
+  instruction: MyString
