@@ -12,12 +12,15 @@ class ProgramsController < ApplicationController
 
   # GET /programs/1
   # GET /programs/1.xml
+  # GET /programs/1.pde
   def show
     @program = Program.find(params[:id])
+    @events = Event.find(:all)
 
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @program }
+      format.pde # show.pde.erb 
     end
   end
 

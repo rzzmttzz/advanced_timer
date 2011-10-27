@@ -1,9 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @program.name %>
-</p>
+
+<h2><%= @program.name %></h2>
+
+<% @events.each do |e| %>
+	<p class='event'>
+		<% if e.type==Event::TIMER %>
+			<div class='timer'>
+				<%= e.hour %>:<%= e.minute %>:<%= e.second %>
+			</div>
+		<% elsif e.type==Event::TEMPERATURE %>
+			<div class='temperature'>
+				<%= e.compare %> <%= e.temperature %>C 
+			</div>
+		<% end %>
+		
+		<div class='instruction'>
+			<%= e.instruction %>
+		</div>
+		<%= link_to 'Edit', edit_event_path(@e) %>
+	</p>
+<% end %>
+
+<%= link_to 'New Event', new_event_path %> 
 
 
 <%= link_to 'Edit', edit_program_path(@program) %> |
