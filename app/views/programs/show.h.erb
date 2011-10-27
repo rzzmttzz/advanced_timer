@@ -1,0 +1,30 @@
+#include "program.h"
+//"                  " 18 chars
+<% 
+	@WIDTH = 18
+	@events.each_with_index do |e, i|
+		@words = e.instruction.split(' ')
+		@rows = {};
+		@words.each do |w| 
+			
+		end
+		
+		%>	
+		String camembert<%= i %>[] = {
+		<% @rows.each_with_index do |r, i| %>
+			<% if i == 0 %>
+				"<%= r %>"
+			<% else %>
+				",<%= r %>"
+			<% end %>
+		<% end %>
+		};	
+	<% end %>
+
+
+
+Event camembert[3] = {
+  {TIMER,0,0,0,0,0,camembert1,5},
+  {TEMPERATURE,0,0,0,G,32,camembert2,5},
+  {TIMER,0,0,5,0,0,camembert3,2}
+};

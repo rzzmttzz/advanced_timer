@@ -4,4 +4,4 @@
 # Mime::Type.register "text/richtext", :rtf
 # Mime::Type.register_alias "text/html", :iphone
 
-Mime::Type.register "text/x-csrc", :pde  #The :pde is the important part
+Mime::Type.register "text/x-chdr", :h  #The :pde is the important part
